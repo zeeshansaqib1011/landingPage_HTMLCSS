@@ -1,0 +1,793 @@
+
+         /* heroSection */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+/* Add your existing styles for .navbar, .logo, and .links here */
+
+/* New styles for responsive navbar */
+/* Toggler for small screens */
+nav {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+  }
+  nav .mainMenu li a:hover {
+    background: rgb(255, 94, 0);
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .fa-facebook:hover {
+    color: rgb(0, 110, 255);
+  }
+  .fa-twitter:hover {
+    color: rgb(86, 154, 243);
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 0, 191);
+  }
+  .fa-github:hover {
+    color: rgb(255, 123, 0);
+  }
+  nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+    }
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+
+/* hero section */
+.heroBtn .btn{
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.heroBtn .btn:hover{
+    background-color: red;
+    transform: scale(1.1);
+}
+
+  .theme-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .theme-switch label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 10px;
+  }
+
+  .theme-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+
+  input[type="checkbox"]:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(20px);
+  }
+
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .navbar .links {
+      display: none;
+    }
+
+    .navbar .menu-toggle {
+      display: block;
+    }
+
+    .navbar .links.active {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      justify-content: left;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .hero-section p {
+      font-size: 14px;
+    }
+  }
+#herosection::before{
+    background: url('sunburst-gf62ac928c_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+    opacity: .9;
+}
+#content{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content h1{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+#content p{
+    margin: 2rem;
+}
+#content .contentBtn{
+    background-color: orange;
+    color: white;
+    padding: .6rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+#content .contentBtn:hover{
+    background-color: red;
+    transition: all .5s linear;
+    transform:scale(1.1);
+}
+               /* section1 */
+#section1{
+    width: 700px;
+    margin: auto;
+    padding: 3rem;
+}               
+#section1 h1{
+    font-weight: bold;
+    padding-top: 2rem;
+}
+#section1 p{
+    margin: 1rem;
+    text-align: justify;
+}
+#section1 .contentBtn{
+    background-color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    text-transform: uppercase;
+    /* border: none; */
+    border-radius: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.line{
+    justify-content:center;
+    width: 5rem;
+    height: 5px;
+    background-color: green;
+}
+
+    #section3 h1{
+    font-weight: bold;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+#section3 p{
+    margin: .5rem;
+    text-align: center;
+}
+#cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    color: white ;
+    background-color: slateblue;
+    width: 600px;
+    height: 200px;
+    border: 1px solid rgb(206, 204, 204);
+    padding: 10px;
+    margin: 0;
+    box-shadow: 3px 3px 3px rgb(215, 215, 215);
+}
+#card2{
+    background-color: black;
+    color: white;
+}
+.card i {
+    font-size: 30px;
+}
+
+.card h1 {
+    margin: 1rem;
+
+}
+ #cards{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .foot1 {
+    display: flex;
+    align-items: center;
+    width: 33%;
+    margin: 0rem 1rem;
+    background-color: rgb(243, 243, 219);
+    border-radius: 20px 0px 0px 20px;
+    color: rgb(46, 46, 125);
+    font-weight: bold;
+}
+
+.foot1 i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    color: rgb(46, 46, 125);
+    border-radius: 50%;
+    border: 1px solid rgb(46, 46, 125);
+}
+.foot_content{
+padding-left: 10px;
+}
+#desig i{
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+    color: #fff;
+    padding-top: 1.3rem;
+
+}
+#portfolio{
+    display: flex;
+    justify-content: center;
+}
+#portfolio h4{
+    color: rgb(46, 46, 125);
+    padding: 1rem;
+}
+#layoutfoot{
+    width: 1200px;
+    height: 120vh;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 400px 400px 400px;
+    grid-template-columns: 400px 400px 400px;
+}
+.last{
+    background-color: rgb(46, 46, 125);
+    margin-top: 2rem;
+}
+
+   /* Responsive layout
+    */
+    @media(max-width: 660px){
+        .navbar{
+            display: flex;
+            flex-direction: column;
+            font-size: 10px;
+            justify-content: left;
+        }  
+        #content{
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar .links{
+            display: flex;
+            flex-direction: column;
+            font-size: 10px;
+            justify-content: left;
+        } 
+        #layoutfoot{
+           display: flex;
+           flex-direction: column;
+        }
+        
+        #section1{
+            width:100%;
+        }
+    }
+    /* heroSection */
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+/* Add your existing styles for .navbar, .logo, and .links here */
+
+/* New styles for responsive navbar */
+/* Toggler for small screens */
+nav {
+background: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+nav .mainMenu {
+display: flex;
+list-style: none;
+}
+nav .mainMenu li a {
+display: inline-block;
+padding: 15px;
+text-decoration: none;
+text-transform: uppercase;
+color: rgb(255, 255, 255);
+font-size: 18px;
+transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+background: rgb(255, 94, 0);
+}
+nav .openMenu {
+font-size: 2rem;
+margin: 20px;
+display: none;
+cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+font-size: 2rem;
+display: none;
+cursor: pointer;
+}
+.fa-facebook:hover {
+color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+color: rgb(255, 123, 0);
+}
+nav .logo {
+margin: 6px;
+cursor: pointer;
+text-transform: uppercase;
+}
+@media (max-width: 800px) {
+nav .mainMenu {
+ height: 100vh;
+ position: fixed;
+ top: 0px;
+ right: 0px;
+ left: 0px;
+ z-index: 10;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background: rgb(0, 0, 0);
+ transition: top 1s ease 0s;
+ display: none;
+}
+nav .mainMenu .closeMenu {
+ display: block;
+ position: absolute;
+ top: 20px;
+ right: 20px;
+}
+nav .openMenu {
+ display: block;
+}
+nav .mainMenu li a:hover {
+ background: none;
+ color: rgb(255, 123, 0);
+}
+.icons i {
+ display: inline-block;
+ padding: 12px;
+}
+}
+
+/* hero section */
+.heroBtn .btn{
+background-color: orange;
+color: white;
+padding: 10px;
+text-transform: uppercase;
+border: none;
+border-radius: 5px;
+letter-spacing: 1px;
+font-weight: bold;
+cursor: pointer;
+transition: all .5s ease-in-out;
+}
+.heroBtn .btn:hover{
+background-color: red;
+transform: scale(1.1);
+}
+
+.theme-switch {
+position: absolute;
+top: 10px;
+right: 10px;
+display: flex;
+align-items: center;
+color: white;
+}
+
+.theme-switch label {
+position: relative;
+display: inline-block;
+width: 40px;
+height: 20px;
+margin: 0 10px;
+}
+
+.theme-switch input[type="checkbox"] {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+border-radius: 20px;
+cursor: pointer;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 14px;
+width: 14px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+border-radius: 50%;
+transition: .4s;
+}
+
+input[type="checkbox"]:checked + .slider {
+background-color: #2196F3;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+transform: translateX(20px);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+.navbar .links {
+ display: none;
+}
+
+.navbar .menu-toggle {
+ display: block;
+}
+
+.navbar .links.active {
+ display: flex;
+ flex-direction: column;
+ font-size: 14px;
+ justify-content: left;
+}
+
+.hero-section h1 {
+ font-size: 2rem;
+}
+
+.hero-section p {
+ font-size: 14px;
+}
+}
+#herosection::before{
+background: url('sunburst-gf62ac928c_1920.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position:center;
+position: absolute;
+content: "";
+top: 0;
+left: 0;
+width: 100%;
+height: 70vh;
+z-index: -1;
+opacity: .9;
+}
+#content{
+height: 60vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#content h1{
+font-size: 3rem;
+font-weight: bolder;
+}
+#content p{
+margin: 2rem;
+}
+#content .contentBtn{
+background-color: orange;
+color: white;
+padding: .6rem 1rem;
+font-weight: bold;
+text-transform: uppercase;
+border: none;
+border-radius: 20px;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all .5s ease-in-out;
+}
+#content .contentBtn:hover{
+background-color: red;
+transition: all .5s linear;
+transform:scale(1.1);
+}
+          /* section1 */
+#section1{
+width: 700px;
+margin: auto;
+padding: 3rem;
+}               
+#section1 h1{
+font-weight: bold;
+padding-top: 2rem;
+}
+#section1 p{
+margin: 1rem;
+text-align: justify;
+}
+#section1 .contentBtn{
+background-color: white;
+padding: 5px 10px;
+font-weight: bold;
+border: 1px solid black;
+text-transform: uppercase;
+/* border: none; */
+border-radius: 20px;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all .5s ease-in-out;
+}
+.line{
+justify-content:center;
+width: 5rem;
+height: 5px;
+background-color: green;
+}
+
+#section3 h1{
+font-weight: bold;
+padding-top: 1.5rem;
+text-align: center;
+}
+#section3 p{
+margin: .5rem;
+text-align: center;
+}
+#cards {
+display: flex;
+justify-content: center;
+text-align: center;
+padding: 20px;
+}
+
+.card {
+color: white ;
+background-color: slateblue;
+width: 600px;
+height: 200px;
+border: 1px solid rgb(206, 204, 204);
+padding: 10px;
+margin: 0;
+box-shadow: 3px 3px 3px rgb(215, 215, 215);
+}
+#card2{
+background-color: black;
+color: white;
+}
+.card i {
+font-size: 30px;
+}
+
+.card h1 {
+margin: 1rem;
+
+}
+#cards{
+display: flex;
+justify-content: space-evenly;
+}
+.foot1 {
+display: flex;
+align-items: center;
+width: 33%;
+margin: 0rem 1rem;
+background-color: rgb(243, 243, 219);
+border-radius: 20px 0px 0px 20px;
+color: rgb(46, 46, 125);
+font-weight: bold;
+}
+
+.foot1 i {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+width: 50px;
+color: rgb(46, 46, 125);
+border-radius: 50%;
+border: 1px solid rgb(46, 46, 125);
+}
+.foot_content{
+padding-left: 10px;
+}
+#desig i{
+display: flex;
+justify-content:space-evenly ;
+align-items: center;
+color: #fff;
+padding-top: 1.3rem;
+
+}
+#portfolio{
+display: flex;
+justify-content: center;
+}
+#portfolio h4{
+color: rgb(46, 46, 125);
+padding: 1rem;
+}
+#layoutfoot{
+width: 1200px;
+height: 120vh;
+margin: auto;
+display: grid;
+grid-template-rows: 400px 400px 400px;
+grid-template-columns: 400px 400px 400px;
+}
+.last{
+background-color: rgb(46, 46, 125);
+margin-top: 2rem;
+}
+
+/* Responsive layout
+*/
+@media(max-width: 660px){
+   .navbar{
+       display: flex;
+       flex-direction: column;
+       font-size: 10px;
+       justify-content: left;
+   }  
+   #content{
+       display: flex;
+       flex-direction: column;
+   }
+   .navbar .links{
+       display: flex;
+       flex-direction: column;
+       font-size: 10px;
+       justify-content: left;
+   } 
+   #layoutfoot{
+      display: flex;
+      flex-direction: column;
+   }
+   
+   #section1{
+       width:100%;
+   }
+}
